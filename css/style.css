@@ -1,0 +1,251 @@
+:root {
+  --verde-escuro: #001a1a;
+  --verde-claro: #00ff99;
+  --verde-meio: #00cc7a;
+  --branco: #f5f5f5;
+  --cinza: #0d2b2b;
+  --fonte-titulo: 'Poppins', sans-serif;
+  --fonte-texto: 'Inter', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background: var(--verde-escuro);
+  color: var(--branco);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--verde-claro);
+}
+
+.logo span {
+  color: var(--branco);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--verde-claro);
+}
+
+.ia-link {
+  background: var(--verde-claro);
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.ia-link:hover {
+  background: var(--verde-meio);
+}
+
+/* SOCIAL ICONS - sempre visíveis */
+.social img {
+  width: 22px;
+  margin-left: 10px;
+  filter: brightness(1);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #001a1a, #003333);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.perfil {
+  width: 180px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--verde-claro);
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-family: var(--fonte-titulo);
+  color: var(--verde-claro);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-family: var(--fonte-titulo);
+  margin-bottom: 15px;
+}
+
+.hero h2 span {
+  color: var(--verde-claro);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: var(--verde-claro);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--verde-meio);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--verde-claro);
+  color: var(--verde-claro);
+}
+
+.btn-outline:hover {
+  background: var(--verde-claro);
+  color: #000;
+}
+
+/* CONSIDERAÇÕES */
+.consideracoes {
+  padding: 80px 0;
+  text-align: center;
+  background: var(--cinza);
+}
+
+.consideracoes h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  color: var(--verde-claro);
+  margin-bottom: 10px;
+}
+
+.consideracoes .intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  background: #002525;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 255, 153, 0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.2);
+}
+
+.card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-claro);
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .perfil {
+    width: 130px;
+    height: 130px;
+  }
+}
